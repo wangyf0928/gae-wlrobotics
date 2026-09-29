@@ -3,17 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <meta name="title" content="GAE: General Action Expert for Real-Time Humanoid Teleoperation - Yuefan Wang et al.">
+<meta name="title" content="GAE: General Action Expert for Real-Time Humanoid Teleoperation - Yuefan Wang et al.">
   <meta name="description" content="GAE is a whole-body humanoid control framework for low-latency teleoperation, diverse motion tracking, and real-world humanoid deployment.">
   <meta name="keywords" content="Humanoid Robot, Whole-body Teleoperation, Embodied Intelligence, Reinforcement Learning, AI">
   <meta name="author" content="Yuefan Wang, Huaicheng Zhou, Xiao He, Zhijie He, Mingchuan Yang, Huayi Zhang, Li Chai, Jinxin Liu, Donglin Wang">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="article">
+<meta property="og:type" content="article">
   <meta property="og:site_name" content="Westlake Robotics">
   <meta property="og:title" content="GAE: General Action Expert for Real-Time Humanoid Teleoperation">
   <meta property="og:description" content="GAE is a whole-body humanoid control framework for low-latency teleoperation, diverse motion tracking, and real-world humanoid deployment.">
@@ -26,19 +22,13 @@
   <meta property="article:section" content="Research">
   <meta property="article:tag" content="Humanoid Robot">
   <meta property="article:tag" content="Whole-body Teleoperation">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@WestlakeRobotics">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@WestlakeRobotics">
   <meta name="twitter:title" content="GAE: General Action Expert for Real-Time Humanoid Teleoperation">
   <meta name="twitter:description" content="GAE is a whole-body humanoid control framework for low-latency teleoperation, diverse motion tracking, and real-world humanoid deployment.">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://wangyf0928.github.io/gae-wlrobotics/static/images/social_preview.png">
+<meta name="twitter:image" content="https://wangyf0928.github.io/gae-wlrobotics/static/images/social_preview.png">
   <meta name="twitter:image:alt" content="GAE: General Action Expert for Real-Time Humanoid Teleoperation - Research Preview">
-
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="GAE: General Action Expert for Real-Time Humanoid Teleoperation">
+<meta name="citation_title" content="GAE: General Action Expert for Real-Time Humanoid Teleoperation">
   <meta name="citation_author" content="Wang, Yuefan">
   <meta name="citation_author" content="Zhou, Huaicheng">
   <meta name="citation_author" content="He, Xiao">
@@ -49,658 +39,317 @@
   <meta name="citation_author" content="Liu, Jinxin">
   <meta name="citation_author" content="Wang, Donglin">
   <meta name="citation_publication_date" content="2026">
-  <meta name="citation_conference_title" content="arXiv">
-  <!-- TODO: Same as social preview pdf above -->
-  <meta name="citation_pdf_url" content="https://wangyf0928.github.io/gae-wlrobotics/static/pdfs/GAE_final.pdf">
+  <meta name="citation_publisher" content="arXiv">
+<meta name="citation_pdf_url" content="https://wangyf0928.github.io/gae-wlrobotics/static/pdfs/GAE_final.pdf">
   
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  
-  <!-- Preconnect for performance -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
-  <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
-
-  <title>GAE: General Action Expert for Real-Time Humanoid Teleoperation.</title>
-  
-  <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/wlrobotics.ico">
-  <link rel="apple-touch-icon" href="static/images/wlrobotics.ico">
-  
-  <!-- Critical CSS - Load synchronously -->
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-  
-  <!-- Non-critical CSS - Load asynchronously -->
-  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  
-  <!-- Fallback for browsers that don't support preload -->
-  <noscript>
-    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  </noscript>
-  
-  <!-- Fonts - Optimized loading -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Defer non-critical JavaScript -->
-  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script defer src="static/js/bulma-carousel.min.js"></script>
-  <script defer src="static/js/bulma-slider.min.js"></script>
-  <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "GAE: General Action Expert for Real-Time Humanoid Teleoperation",
-    "description": "GAE is a whole-body humanoid control framework for low-latency teleoperation, diverse motion tracking, and real-world humanoid deployment.",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "Yuefan Wang",
-        "affiliation": [
-          {
-            "@type": "Organization",
-            "name": "Westlake Robotics"
-          },
-          {
-            "@type": "Organization",
-            "name": "Westlake University"
-          }
-        ]
-      },
-      {
-        "@type": "Person",
-        "name": "Huaicheng Zhou",
-        "affiliation": {
+  <meta name="theme-color" content="#2863ac">
+  <link rel="canonical" href="https://wangyf0928.github.io/gae-wlrobotics/">
+  <link rel="icon" href="static/images/wlrobotics.ico">
+  <title>GAE: General Action Expert for Real-Time Humanoid Teleoperation</title>
+  <!-- Styles and behavior are self-contained; existing static media paths are preserved. -->
+  <style>
+:root{--ink:#172b45;--muted:#54657a;--blue:#2863ac;--line:#dce5ee;--wash:#f4f7fb;--white:#fff;--radius:16px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;color:var(--ink);background:var(--white);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased}a{color:var(--blue);text-underline-offset:4px}button{font:inherit;cursor:pointer}a,button,summary{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #579de3;outline-offset:5px}img,video{display:block;max-width:100%}img{height:auto}video{width:100%;height:auto;background:#142338;border-radius:var(--radius)}h1,h2,h3,p,figure{margin:0}h1,h2,h3{line-height:1.2;letter-spacing:-.035em}h2{font-size:clamp(28px,3vw,39px);font-weight:700}h3{font-size:20px}p+p{margin-top:16px}.wrap{width:min(1120px,calc(100% - 48px));margin-inline:auto}.section{padding:78px 0}.wash{background:var(--wash)}.section-head{max-width:760px;margin-bottom:30px}.section-head p{color:var(--muted);margin-top:14px;font-size:17px}.eyebrow{display:block;color:var(--blue);font-size:12px;font-weight:750;letter-spacing:.15em;text-transform:uppercase;margin-bottom:12px}.site-nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}.nav-inner{min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{color:var(--ink);font-size:22px;font-weight:800;text-decoration:none;letter-spacing:-.06em}.nav-links{display:flex;gap:25px;align-items:center}.nav-links a{font-size:13px;font-weight:600;text-decoration:none;color:var(--muted)}.nav-links a:hover{color:var(--blue)}.skip-link{position:absolute;top:-100px;left:12px;background:white;padding:12px;z-index:30}.skip-link:focus{top:8px}.hero{padding:48px 0 42px;text-align:center}.hero h1{max-width:1000px;margin:auto}.hero .name{display:block;color:var(--blue);font-size:clamp(46px,6vw,68px);font-weight:800;line-height:1.05;letter-spacing:-.06em}.hero .expert{display:block;font-size:clamp(28px,4vw,42px);margin-top:10px}.hero .paper-subtitle{display:block;font-size:clamp(20px,2.7vw,29px);font-weight:500;margin-top:12px;letter-spacing:-.02em}.hero-lead{max-width:720px;margin:20px auto 0;font-size:18px;color:var(--muted)}.authors{max-width:880px;margin:20px auto 0;font-size:14px;line-height:1.9;color:var(--muted)}.authors span{display:inline-block}.affiliations{font-size:14px;font-weight:600;margin-top:7px}.corresponding{color:var(--muted);font-size:12px;margin-top:3px}.actions{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:23px}.button{display:inline-flex;justify-content:center;align-items:center;min-height:44px;padding:8px 19px;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);font-size:14px;font-weight:650;text-decoration:none;transition:background .15s,border-color .15s}.button:hover{background:#edf3fa;border-color:#adc3dc}.button.primary{background:var(--blue);border-color:var(--blue);color:white}.button.primary:hover{background:#20528e}.hero-media{margin-top:30px;text-align:left}.hero-media video{box-shadow:0 12px 35px #19355412}.hero-media figcaption{font-size:14px;color:var(--muted);max-width:850px;margin:15px auto 0;text-align:center}.milestones{margin-top:27px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:40px;padding:15px 0;color:var(--muted);font-size:13px;flex-wrap:wrap}.milestones strong{color:var(--ink);margin-right:9px}.milestones a{text-decoration:none}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:34px;text-align:left}.feature{padding-left:18px;border-left:2px solid #c1d5e9}.feature h2{font-size:18px;letter-spacing:-.02em}.feature p{font-size:14px;line-height:1.7;color:var(--muted);margin-top:8px}.grid-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.video-card{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:white}.video-card video{border-radius:0;aspect-ratio:16/9;object-fit:contain}.card-copy{padding:20px 22px}.card-copy p{color:var(--muted);font-size:14px;margin-top:8px}.wide-video{max-width:1000px;margin-inline:auto}.media-caption{font-size:14px;color:var(--muted);margin-top:13px}.compare-labels{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:14px}.compare-labels span{background:white;border:1px solid var(--line);border-radius:8px;padding:10px 14px;font-size:14px;text-align:center}.compare-labels .accent{background:#e7f0fb;border-color:#b9d0ed;color:#20528e}.overview{padding:20px;border:1px solid var(--line);border-radius:var(--radius);background:white}.overview a{display:block}.overview img{width:100%}.overview figcaption{margin-top:16px;font-size:14px;color:var(--muted)}.method-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:32px}.step-number{font-size:12px;font-weight:750;color:var(--blue);letter-spacing:.1em;display:block;margin-bottom:12px}.method-grid h3{font-size:19px}.method-grid p{font-size:14px;color:var(--muted);margin-top:12px}.note{margin-top:23px;padding:16px 20px;border-left:3px solid #9bbce0;background:var(--wash);color:var(--muted);font-size:14px}.platform-videos{margin-top:24px}.archive{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}.archive p{color:var(--muted);font-size:15px;margin-top:18px}.archive .button{margin-top:20px}.embed-frame{aspect-ratio:16/9;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:#eaf0f7}.embed-frame iframe{display:block;width:100%;height:100%;border:0}.media-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.press-card{margin:0;overflow:hidden;border-radius:12px;border:1px solid var(--line);background:white}.press-card a{display:block;background:#eef2f6}.press-card img{width:100%;height:220px;object-fit:contain}.press-card figcaption{padding:18px;font-size:14px;font-weight:600}.abstract{max-width:800px}.abstract p{margin-top:22px;color:var(--muted);line-height:1.85}.citation-head{display:flex;justify-content:space-between;align-items:center;gap:15px;margin-bottom:20px}pre{padding:24px;margin:0;border:1px solid var(--line);border-radius:12px;background:#f5f7fa;overflow:auto;font-size:13px;line-height:1.75;color:#30445c;tab-size:2}.copy-status{min-height:26px;font-size:13px;color:var(--muted);margin-top:8px}.footer{padding:28px 0;border-top:1px solid var(--line);color:var(--muted);font-size:12px}.footer-inner{display:flex;justify-content:space-between;gap:24px}.footer a{color:inherit}.back-top{position:fixed;bottom:20px;right:20px;width:43px;height:43px;border-radius:50%;border:1px solid var(--line);background:white;color:var(--ink);box-shadow:0 3px 12px #19355415;font-size:20px;z-index:15}.back-top[hidden]{display:none}.resource-link{margin-top:20px;display:inline-block;font-size:14px;font-weight:600}
+@media(min-width:1450px){.hero-media{max-width:1020px;margin-inline:auto}}
+@media(max-width:760px){html{scroll-padding-top:112px}.wrap{width:calc(100% - 32px)}.section{padding:50px 0}.nav-inner{gap:14px;min-height:58px}.nav-links{gap:17px;overflow-x:auto;white-space:nowrap;padding:10px 0}.nav-links a{font-size:12px}.hero{padding-top:32px}.hero-lead{font-size:16px}.authors{font-size:12px}.affiliations{font-size:13px}.milestones{gap:8px 22px;justify-content:flex-start}.features{grid-template-columns:1fr;gap:21px;margin-top:27px}.grid-two,.archive{grid-template-columns:1fr}.method-grid{grid-template-columns:1fr;gap:25px}.method-grid article{padding-bottom:20px;border-bottom:1px solid var(--line)}.media-grid{grid-template-columns:1fr}.press-card img{height:260px}.section-head p{font-size:16px}.overview{padding:10px}.compare-labels{gap:8px}.compare-labels span{font-size:12px;padding:9px 7px}.footer-inner{display:block}.footer-inner p+p{margin-top:10px}pre{padding:16px;font-size:12px}.archive{gap:24px}.hero-media{margin-top:24px}.hero-media figcaption{font-size:12px}.back-top{right:12px;bottom:12px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+.affiliations{font-size:18px}
+@media(max-width:760px){.affiliations{font-size:16px}}
+.history-layout{display:block}.history-layout>div:first-child{max-width:760px;margin-bottom:28px}.history-layout>div:last-child{width:100%}
+.hero-lead{max-width:none;white-space:nowrap}
+@media(max-width:760px){.hero-lead{white-space:normal}}
+.button.light-blue{background:#dbeafe;border-color:#b9d0ed;color:#20528e}.button.light-blue:hover{background:#c7ddf5;border-color:#9bbce0}
+</style>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "GAE: General Action Expert for Real-Time Humanoid Teleoperation",
+  "description": "GAE is a whole-body humanoid control framework for low-latency teleoperation, diverse motion tracking, and real-world humanoid deployment.",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Yuefan Wang",
+      "affiliation": [
+        {
           "@type": "Organization",
           "name": "Westlake Robotics"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "Xiao He",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "Westlake Robotics"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "Zhijie He",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "Westlake Robotics"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "Mingchuan Yang",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "Westlake Robotics"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "Huayi Zhang",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "Westlake Robotics"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "Li Chai",
-        "affiliation": {
+        },
+        {
           "@type": "Organization",
           "name": "Westlake University"
         }
-      },
-      {
-        "@type": "Person",
-        "name": "Jinxin Liu",
-        "affiliation": {
+      ]
+    },
+    {
+      "@type": "Person",
+      "name": "Huaicheng Zhou",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Westlake Robotics"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "Xiao He",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Westlake Robotics"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "Zhijie He",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Westlake Robotics"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "Mingchuan Yang",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Westlake Robotics"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "Huayi Zhang",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Westlake Robotics"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "Li Chai",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Westlake University"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "Jinxin Liu",
+      "affiliation": {
+        "@type": "Organization",
+        "name": "Westlake Robotics"
+      }
+    },
+    {
+      "@type": "Person",
+      "name": "Donglin Wang",
+      "affiliation": [
+        {
           "@type": "Organization",
           "name": "Westlake Robotics"
+        },
+        {
+          "@type": "Organization",
+          "name": "Westlake University"
         }
-      },
-      {
-        "@type": "Person",
-        "name": "Donglin Wang",
-        "affiliation": [
-          {
-            "@type": "Organization",
-            "name": "Westlake Robotics"
-          },
-          {
-            "@type": "Organization",
-            "name": "Westlake University"
-          }
-        ]
-      }
-    ],
-    "datePublished": "2026-09-28",
-    "publisher": {
-      "@type": "Organization",
-      "name": "arXiv"
-    },
-    "url": "https://wangyf0928.github.io/gae-wlrobotics/",
-    "image": "https://wangyf0928.github.io/gae-wlrobotics/static/images/social_preview.png",
-    "keywords": ["humanoid robot", "whole-body teleoperation", "whole-body control", "embodied intelligence", "motion tracking"],
-    "abstract": "Humanoid avatars extend human physical presence beyond the body, enabling people to participate in social, service, and labor activities through remotely operated robots. This requires teleoperation systems capable of realizing diverse and dynamic whole-body behaviors while maintaining responsive human-robot synchronization. We present \textbf{General Action Expert (GAE)}, a unified learning framework for general-purpose, low-latency humanoid whole-body teleoperation. To cover diverse human behaviors, GAE builds a large-scale human motion dataset from heterogeneous sources, including videos, animations, and motion capture, followed by standardization and augmentation. GAE then addresses the noise and embodiment mismatch in human motions with a two-stage training paradigm: a privileged generator policy first tracks human motion references in simulation and rolls out feasible humanoid trajectories; a deployable executor policy then learns to track these generated trajectories under curriculum domain randomization. For responsive human-robot synchronization, GAE introduces a latency-conditioned anticipation mechanism that adaptively compensates for end-to-end delay during real-time teleoperation. Simulation and real-world experiments on Unitree G1 and Westlake O1 robots demonstrate that GAE enables humanoids to smoothly mirror diverse, agile, and expressive human behaviors.",
-    "citation": "BIBTEX_CITATION_HERETODO",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://wangyf0928.github.io/gae-wlrobotics/"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "Humanoid Robot"
-      },
-      {
-        "@type": "Thing", 
-        "name": "Whole-Body Teleoperation"
-      },
-      {
-        "@type": "Thing", 
-        "name": "Embodied Intelligence"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
+      ]
+    }
+  ],
+  "datePublished": "2026-09-28",
+  "publisher": {
     "@type": "Organization",
-    "name": "Westlake Robotics",
-    "url": "https://www.wlrobo.com/",
-    "logo": "https://wlrobo.com/assets/wlrobot-logo-0-BlnQYKlr.svg",
-    "sameAs": [
-      "https://twitter.com/WestlakeRobotics",
-    ]
-  }
-  </script>
+    "name": "arXiv"
+  },
+  "url": "https://wangyf0928.github.io/gae-wlrobotics/",
+  "image": "https://wangyf0928.github.io/gae-wlrobotics/static/images/social_preview.png",
+  "keywords": [
+    "humanoid robot",
+    "whole-body teleoperation",
+    "whole-body control",
+    "embodied intelligence",
+    "motion tracking"
+  ],
+  "abstract": "Humanoid avatars extend human physical presence beyond the body, enabling people to participate in social, service, and labor activities through remotely operated robots. This requires teleoperation systems capable of realizing diverse and dynamic whole-body behaviors while maintaining responsive human-robot synchronization. We present General Action Expert (GAE), a unified learning framework for general-purpose, low-latency humanoid whole-body teleoperation. To cover diverse human behaviors, GAE builds a large-scale human motion dataset from heterogeneous sources, including videos, animations, and motion capture, followed by standardization and augmentation. GAE then addresses the noise and embodiment mismatch in human motions with a two-stage training paradigm: a privileged generator policy first tracks human motion references in simulation and rolls out feasible humanoid trajectories; a deployable executor policy then learns to track these generated trajectories under curriculum domain randomization. For responsive human-robot synchronization, GAE introduces a latency-conditioned anticipation mechanism that adaptively compensates for end-to-end delay during real-time teleoperation. Simulation and real-world experiments on Unitree G1 and Westlake O1 robots demonstrate that GAE enables humanoids to smoothly mirror diverse, agile, and expressive human behaviors.",
+  "citation": "https://arxiv.org/abs/2609.34233",
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "mainEntity": {
+    "@type": "WebPage",
+    "@id": "https://wangyf0928.github.io/gae-wlrobotics/"
+  },
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Humanoid Robot"
+    },
+    {
+      "@type": "Thing",
+      "name": "Whole-Body Teleoperation"
+    },
+    {
+      "@type": "Thing",
+      "name": "Embodied Intelligence"
+    }
+  ],
+  "sameAs": "https://arxiv.org/abs/2609.34233"
+}</script>
 </head>
 <body>
 
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-nav"><div class="wrap nav-inner">
+  <a class="brand" href="#top" aria-label="GAE home">GAE<span style="color:var(--blue)">.</span></a>
+  <nav class="nav-links" aria-label="Page navigation"><a href="#demos">Demos</a><a href="#latency">Latency</a><a href="#method">Method</a><a href="#results">Results</a><a href="#history">Previous Demo</a><a href="#BibTeX">Cite</a></nav>
+</div></header>
+<main id="main-content">
+<section class="hero" id="top"><div class="wrap">
+  <h1><span class="name">GAE</span><span class="expert">General Action Expert</span><span class="paper-subtitle">Real-Time Humanoid Teleoperation</span></h1>
+  <p class="hero-lead">Turning humanoid robots into embodied avatars that mirror diverse human movements in real time.</p>
+  <!--
+  <p class="authors"><span>Yuefan Wang<sup>1,2</sup>,</span> <span>Huaicheng Zhou<sup>1</sup>,</span> <span>Xiao He<sup>1</sup>,</span> <span>Zhijie He<sup>1</sup>,</span> <span>Mingchuan Yang<sup>1</sup>,</span> <span>Huayi Zhang<sup>1</sup>,</span> <span>Li Chai<sup>2</sup>,</span> <span>Jinxin Liu<sup>1,*</sup>,</span> <span>Donglin Wang<sup>1,2,*</sup></span></p>
+  -->
+  <p class="affiliations">Westlake Robotics &times; Westlake University</p>
+  <!-- <p class="corresponding">* Corresponding authors</p> -->
+  <div class="actions"><a class="button primary" href="static/pdfs/GAE_final.pdf" target="_blank" rel="noopener noreferrer">Paper PDF ↗</a><a class="button" href="https://arxiv.org/abs/2609.34233" target="_blank" rel="noopener noreferrer">arXiv ↗</a><a class="button light-blue" href="https://www.wlrobo.com/GAEDownload" target="_blank" rel="noopener noreferrer">Get started ↗</a></div>
+  <!-- Optional: add a dedicated poster and replace demo.mp4 with a short highlight reel. -->
+  <figure class="hero-media"><video id="main-demo" autoplay controls muted loop playsinline preload="metadata" aria-label="GAE overview: real-time whole-body humanoid teleoperation">
+      <source src="static/videos/demo.mp4" type="video/mp4">
+      Your browser does not support embedded video. <a href="static/videos/demo.mp4">Download the video</a>.
+    </video><figcaption>Real-time whole-body teleoperation across diverse, dynamic behaviors and different humanoid platforms.</figcaption></figure>
+  <div class="milestones" aria-label="Project milestones"><a href="#history"><strong>September 2025</strong> First public demo ↗</a><a href="https://arxiv.org/abs/2609.34233" target="_blank" rel="noopener noreferrer"><strong>September 2026</strong> Paper release ↗</a></div>
+  <div class="features"><article class="feature"><h2>Diverse whole-body motion</h2><p>A unified framework for agile, expressive human-to-humanoid motion tracking.</p></article><article class="feature"><h2>Latency-aware synchronization</h2><p>Anticipation compensates for delay to bring human and robot motion closer in time.</p></article><article class="feature"><h2>Transfer across embodiments</h2><p>Demonstrated on Unitree G1 and adapted to Westlake O1 through fine-tuning.</p></article></div>
+</div></section>
 
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
+<section class="section wash" id="history"><div class="wrap archive history-layout">
+  <div><span class="eyebrow">01 / Previous Demo</span><h2>Previous Demo</h2><p><strong>First released on September 29, 2025.</strong> One year later, we share the research behind the system.</p><p>Our first demo introduced GAE as the world's first large general-purpose controller for humanoid robots, demonstrating real-time whole-body control with low latency. GAE enables humanoid robots to act as humanoid avatars of their operators, mirroring a wide range of human movements.</p><a class="button" href="https://www.bilibili.com/video/BV1zEnizBEek/" target="_blank" rel="noopener noreferrer">Watch the previous demo on Bilibili ↗</a></div>
+  <div><div class="embed-frame"><iframe src="https://player.bilibili.com/player.html?isOutside=true&amp;aid=115285864483864&amp;bvid=BV1zEnizBEek&amp;cid=32712624425&amp;p=1" scrolling="no" frameborder="no" title="Original GAE demo, released September 29, 2025" allowfullscreen></iframe></div><p class="media-caption">The first public demonstration · September 2025</p></div>
+</div></section>
 
-  <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">GAE: General Action Expert for Real-Time Humanoid Teleoperation</h1>
-            <!--
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                Yuefan Wang<sup>1,2</sup>,
-              </span>
-              <span class="author-block">
-                Huaicheng Zhou<sup>1</sup>,
-              </span>
-              <span class="author-block">
-                Xiao He<sup>1</sup>,
-              </span>
-              <span class="author-block">
-                Zhijie He<sup>1</sup>,
-              </span>
-              <span class="author-block">
-                Mingchuan Yang<sup>1</sup>,
-              </span>
-              <span class="author-block">
-                Huayi Zhang<sup>1</sup>,
-              </span>
-              <span class="author-block">
-                Li Chai<sup>2</sup>,
-              </span>
-              <span class="author-block">
-                Jinxin Liu<sup>1,*</sup>,
-              </span>
-              <span class="author-block">
-                Donglin Wang<sup>1,2,*</sup>
-              </span>
-            </div>
-            -->
-            <!-- Affiliations -->
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                Westlake Robotics &times; Westlake University
-              </span>
-              <!--
-              <span class="eql-cntrb">
-                <small><br><sup>*</sup>Corresponding authors</small>
-              </span>
-              -->
-            </div>
+<section class="section wash" id="demos"><div class="wrap">
+  <div class="section-head"><span class="eyebrow">02 / Whole-body Teleoperation</span><h2>Mimic diverse movements in real-time</h2><p>From expressive gestures to dynamic movements, GAE enables humanoid robots to mimic the operator's whole-body motion in real time.</p></div>
+  <figure class="wide-video"><video controls muted loop playsinline preload="none" aria-label="Diverse whole-body teleoperation on Unitree G1">
+      <source src="static/videos/full.mp4" type="video/mp4">
+      Your browser does not support embedded video. <a href="static/videos/full.mp4">Download the video</a>.
+    </video><figcaption class="media-caption">Extended demonstration of human-to-robot motion tracking.</figcaption></figure>
+</div></section>
 
-            <!-- Links -->
-            <div class="column has-text-centered">
-              <div class="publication-links">
+<section class="section" id="manipulation"><div class="wrap">
+  <div class="section-head"><span class="eyebrow">03 / Interaction</span><h2>Manipulation with dexterous hands</h2><p>Human operators guide the robot through everyday interactions, combining whole-body movement with object manipulation.</p></div>
+  <div class="grid-two"><article class="video-card"><video controls muted loop playsinline preload="none" aria-label="Opening a refrigerator">
+      <source src="static/videos/fridge.mp4" type="video/mp4">
+      Your browser does not support embedded video. <a href="static/videos/fridge.mp4">Download the video</a>.
+    </video><div class="card-copy"><h3>Opening a refrigerator</h3></div></article><article class="video-card"><video controls muted loop playsinline preload="none" aria-label="Picking up bottles">
+      <source src="static/videos/bottle.mp4" type="video/mp4">
+      Your browser does not support embedded video. <a href="static/videos/bottle.mp4">Download the video</a>.
+    </video><div class="card-copy"><h3>Picking up bottles</h3></div></article><article class="video-card"><video controls muted loop playsinline preload="none" aria-label="Picking up a handbag">
+      <source src="static/videos/bag.mp4" type="video/mp4">
+      Your browser does not support embedded video. <a href="static/videos/bag.mp4">Download the video</a>.
+    </video><div class="card-copy"><h3>Picking up a handbag</h3></div></article><article class="video-card"><video controls muted loop playsinline preload="none" aria-label="Leg massage">
+      <source src="static/videos/massage.mp4" type="video/mp4">
+      Your browser does not support embedded video. <a href="static/videos/massage.mp4">Download the video</a>.
+    </video><div class="card-copy"><h3>Leg massage</h3></div></article></div>
+</div></section>
 
-                <!-- Paper PDF -->
-                <span class="link-block">
-                  <a href="static/pdfs/GAE_final.pdf" target="_blank"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                    </span>
-                    <span>Paper</span>
-                  </a>
-                </span>
+<section class="section wash" id="latency"><div class="wrap">
+  <div class="section-head"><span class="eyebrow">04 / Synchronization</span><h2>Ensuring synchronization through latency compensation</h2><p>Latency-conditioned anticipation compensates for end-to-end delay. Two robots track the same human motion simultaneously, making the effect on synchronization directly visible.</p></div>
+  <div class="wide-video"><div class="compare-labels"><span>Left robot · Without anticipation</span><span class="accent">Right robot · With anticipation</span></div><video controls muted loop playsinline preload="none" aria-label="Latency compensation: left robot without anticipation, right robot with anticipation">
+      <source src="static/videos/latency.mp4" type="video/mp4">
+      Your browser does not support embedded video. <a href="static/videos/latency.mp4">Download the video</a>.
+    </video><p class="media-caption">Anticipation reduces the visible response lag between the operator and the robot.</p></div>
+</div></section>
 
-                <!-- arXiv -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/2609.34233" target="_blank"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="ai ai-arxiv"></i>
-                    </span>
-                    <span>arXiv</span>
-                  </a>
-                </span>
+<section class="section" id="method"><div class="wrap">
+  <div class="section-head"><span class="eyebrow">05 / The framework</span><h2>From human motion to robot action</h2><p>GAE brings together multi-source motion data, two-stage policy training, and latency-conditioned anticipation.</p></div>
+  <figure class="overview"><a href="static/images/overview.png" target="_blank" rel="noopener noreferrer" aria-label="Open the GAE framework diagram at full resolution"><img src="static/images/overview.png" alt="GAE framework: multi-source motion data, generator–executor training, and real-time humanoid teleoperation" loading="lazy" decoding="async"></a><figcaption>Framework overview.</figcaption></figure>
+  <div class="method-grid"><article><span class="step-number">01 / DATA</span><h3>Learn from diverse human motion</h3><p>Human motions from videos, animations, and motion capture are standardized and augmented to broaden behavior coverage.</p></article><article><span class="step-number">02 / TRAINING</span><h3>Generator–executor learning</h3><p>A privileged generator produces feasible humanoid trajectories. These trajectories provide training targets for an executor trained under domain randomization.</p></article><article><span class="step-number">03 / DEPLOYMENT</span><h3>Anticipate and synchronize</h3><p>The executor receives human motion directly at deployment. Latency-conditioned anticipation adjusts tracking to compensate for system delay.</p></article></div>
+</div></section>
 
-                <!-- Usage -->
-                <span class="link-block">
-                  <a href="https://www.wlrobo.com/GAEDownload" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-book"></i>
-                    </span>
-                    <span>Usage</span>
-                  </a>
-                </span>
+<section class="section wash" id="results"><div class="wrap">
+  <div class="section-head"><span class="eyebrow">06 / Evaluation</span><h2>Comparison with SONIC</h2><p>A qualitative comparison of motion tracking. See the paper for quantitative results, metric definitions, and evaluation settings.</p></div>
+  <figure class="wide-video"><video controls muted loop playsinline preload="none" aria-label="Qualitative comparison of GAE and SONIC">
+      <source src="static/videos/sonic.mp4" type="video/mp4">
+      Your browser does not support embedded video. <a href="static/videos/sonic.mp4">Download the video</a>.
+    </video><figcaption class="media-caption">Video comparison accompanying the experimental evaluation.</figcaption></figure>
+  <!-- Add a verified quantitative-results figure here when available. -->
+  <a class="resource-link" href="static/pdfs/GAE_final.pdf" target="_blank" rel="noopener noreferrer">Explore the evaluation in the paper ↗</a>
+</div></section>
 
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<section class="section" id="platforms"><div class="wrap">
+  <div class="section-head"><span class="eyebrow">07 / Embodiments</span><h2>Adapting to another humanoid</h2><p>The GAE framework can be transferred to different humanoid platforms. These demonstrations use a fine-tuned GAE model on Westlake O1.</p></div>
+  <figure class="wide-video"><video controls muted loop playsinline preload="none" aria-label="Whole-body teleoperation with a fine-tuned GAE model on Westlake O1">
+      <source src="static/videos/o1full.mp4" type="video/mp4">
+      Your browser does not support embedded video. <a href="static/videos/o1full.mp4">Download the video</a>.
+    </video><figcaption class="media-caption">Westlake O1 · Whole-body teleoperation after fine-tuning.</figcaption></figure>
+  <div class="grid-two platform-videos"><article class="video-card"><video controls muted loop playsinline preload="none" aria-label="Door interaction">
+      <source src="static/videos/o1_door.mp4" type="video/mp4">
+      Your browser does not support embedded video. <a href="static/videos/o1_door.mp4">Download the video</a>.
+    </video><div class="card-copy"><h3>Breaking a broken door</h3></div></article><article class="video-card"><video controls muted loop playsinline preload="none" aria-label="Kicking a ball">
+      <source src="static/videos/kickball.mp4" type="video/mp4">
+      Your browser does not support embedded video. <a href="static/videos/kickball.mp4">Download the video</a>.
+    </video><div class="card-copy"><h3>Kicking a ball</h3></div></article></div>
+</div></section>
 
+<section class="section" id="media"><div class="wrap">
+  <div class="section-head"><span class="eyebrow">In the news</span><h2>Media coverage</h2><p>Selected coverage of GAE and its humanoid teleoperation demonstrations.</p></div>
+  <!-- Replace image links with original media-report URLs when available. -->
+  <div class="media-grid"><figure class="press-card"><a href="static/images/jiaodian.png" target="_blank" rel="noopener noreferrer" aria-label="View CCTV Focus Report coverage image"><img src="static/images/jiaodian.png" alt="CCTV Focus Report coverage of humanoid teleoperation" loading="lazy" decoding="async"></a><figcaption>CCTV · Focus Report</figcaption></figure><figure class="press-card"><a href="static/images/xinhua.png" target="_blank" rel="noopener noreferrer" aria-label="View Xinhua News coverage image"><img src="static/images/xinhua.png" alt="Xinhua News coverage of the GAE project" loading="lazy" decoding="async"></a><figcaption>Xinhua News</figcaption></figure><figure class="press-card"><a href="static/images/zhejiang.png" target="_blank" rel="noopener noreferrer" aria-label="View Zhejiang Daily coverage image"><img src="static/images/zhejiang.png" alt="Zhejiang Daily coverage of humanoid teleoperation" loading="lazy" decoding="async"></a><figcaption>Zhejiang Daily</figcaption></figure></div>
+</div></section>
 
-<!-- Teaser video-->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="main-demo" autoplay controls muted loop height="100%" preload="metadata">
-        <source src="static/videos/demo.mp4" type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        GAE enables real-time humanoid whole-body teleoperation across diverse and dynamic behaviors, producing synchronized robot actions on different humanoid platforms. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Bilibili video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-
-      <h2 class="title is-3 has-text-centered">Previous Demo</h2>
-
-      <p class="has-text-centered" style="max-width: 900px; margin: 0 auto 2rem auto;">
-        On September 29, 2025, we released the first demo video of GAE, the world's first general-purpose controller for humanoid robots, demonstrating real-time whole-body control with low latency. GAE enables humanoid robots to act as embodied avatars of their operators, mirroring a wide range of human movements in real time.
-      </p>
-
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-
-          <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0;">
-            <iframe 
-              src="https://player.bilibili.com/player.html?isOutside=true&aid=115285864483864&bvid=BV1zEnizBEek&cid=32712624425&p=1"
-              scrolling="no"
-              border="0"
-              frameborder="no"
-              framespacing="0"
-              allowfullscreen="true"
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-            </iframe>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- End Bilibili video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Humanoid avatars extend human physical presence beyond the body, enabling people to participate in social, service, and labor activities through remotely operated robots. This requires teleoperation systems capable of realizing diverse and dynamic whole-body behaviors while maintaining responsive human-robot synchronization. We present \textbf{General Action Expert (GAE)}, a unified learning framework for general-purpose, low-latency humanoid whole-body teleoperation. To cover diverse human behaviors, GAE builds a large-scale human motion dataset from heterogeneous sources, including videos, animations, and motion capture, followed by standardization and augmentation. GAE then addresses the noise and embodiment mismatch in human motions with a two-stage training paradigm: a privileged generator policy first tracks human motion references in simulation and rolls out feasible humanoid trajectories; a deployable executor policy then learns to track these generated trajectories under curriculum domain randomization. For responsive human-robot synchronization, GAE introduces a latency-conditioned anticipation mechanism that adaptively compensates for end-to-end delay during real-time teleoperation. Simulation and real-world experiments on Unitree G1 and Westlake O1 robots demonstrate that GAE enables humanoids to smoothly mirror diverse, agile, and expressive human behaviors.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Single image -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <img src="static/images/overview.png" alt="Overview of GAE" loading="lazy" style="max-width: 70%; height: auto;"/>
-      <h2 class="subtitle has-text-centered">
-        GAE consists of three stages. 1) curating a large-scale multi-source human motion dataset, 2) training the controller in simulation through a generator-executor paradigm, 3) teleoperating real-world humanoid robots with latency-conditioned synchronization.
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End single image -->
-
-
-
-
-<!-- MP4 video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3 has-text-centered">Mimic diverse movements in real-time</h2>
-
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-
-          <div class="publication-video">
-            <video 
-              controls 
-              muted 
-              loop 
-              playsinline 
-              width="100%" 
-              preload="metadata"
-              style="width: 70%; height: auto;"
-            >
-              <source src="static/videos/full.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End MP4 video -->
-
-<!-- Video grid -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container is-max-widescreen">
-
-      <h2 class="title is-3 has-text-centered">Manipulation tasks</h2>
-
-      <!-- 控制整体宽度，让两边留白 -->
-      <div class="columns is-centered is-multiline" style="max-width: 1000px; margin: 0 auto;">
-
-        <!-- Video 1 -->
-        <div class="column is-half">
-          <video controls muted loop playsinline width="100%" preload="metadata">
-            <source src="static/videos/fridge.mp4" type="video/mp4">
-          </video>
-          <h3 class="title is-5 has-text-centered">Open the fridge</h3>
-        </div>
-
-        <!-- Video 2 -->
-        <div class="column is-half">
-          <video controls muted loop playsinline width="100%" preload="metadata">
-            <source src="static/videos/bottle.mp4" type="video/mp4">
-          </video>
-          <h3 class="title is-5 has-text-centered">Pick up the bottles</h3>
-        </div>
-
-        <!-- Video 3 -->
-        <div class="column is-half">
-          <video controls muted loop playsinline width="100%" preload="metadata">
-            <source src="static/videos/bag.mp4" type="video/mp4">
-          </video>
-          <h3 class="title is-5 has-text-centered">Pick up the handbag</h3>
-        </div>
-
-        <!-- Video 4 -->
-        <div class="column is-half">
-          <video controls muted loop playsinline width="100%" preload="metadata">
-            <source src="static/videos/massage.mp4" type="video/mp4">
-          </video>
-          <h3 class="title is-5 has-text-centered">Leg massage</h3>
-        </div>
-
-      </div>
-
-    </div>
-  </div>
-</section>
-<!-- End video grid -->
-
-<!-- MP4 video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3 has-text-centered">Cross-platform deployment</h2>
-      <p class="has-text-centered" style="max-width: 900px; margin: 0 auto 2rem auto;">
-        GAE provides a transferable framework for adapting whole-body control to different humanoid platforms. Here, we demonstrate the performance of fine-tuned GAE model on the Westlake O1 robot.
-      </p>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-
-          <!-- First video -->
-          <div style="margin-bottom: 2rem;">
-            <video 
-              controls 
-              muted 
-              loop 
-              playsinline 
-              preload="metadata"
-              style="width: 70%; height: auto;"
-            >
-              <source src="static/videos/o1full.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-
-          <!-- Second video -->
-          <div class="columns is-centered" style="margin-top: 1rem;">
-            <div class="column is-half">
-              <video controls muted loop playsinline preload="metadata"
-                style="width: 100%; height: auto;">
-                <source src="static/videos/o1_door.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              <p class="subtitle is-5" style="margin-top: 0.75rem;">Broke the door</p>
-            </div>
-
-            <div class="column is-half">
-              <video controls muted loop playsinline preload="metadata"
-                style="width: 100%; height: auto;">
-                <source src="static/videos/kickball.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              <p class="subtitle is-5" style="margin-top: 0.75rem;">Kick the ball</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End MP4 video -->
-
-<!-- MP4 video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3 has-text-centered">Compare with SONIC</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-
-          <!-- First video -->
-          <div style="margin-bottom: 2rem;">
-            <video 
-              controls 
-              muted 
-              loop 
-              playsinline 
-              preload="metadata"
-              style="width: 70%; height: auto;"
-            >
-              <source src="static/videos/sonic.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End MP4 video -->
-
-<!-- MP4 video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3 has-text-centered">Ablation experiment</h2>
-      <p class="has-text-centered" style="max-width: 900px; margin: 0 auto 2rem auto;">
-        GAE introduces a latency-conditioned anticipation mechanism to compensate for end-to-end delay during real-time teleoperation. Here, we let two robots to simultaneously track the same human motion: the left robot acts without anticipation, while the right robot uses anticipation. The anticipation mechanism visibly reduces response delay, enabling tighter synchronization between the human operator and the robot.
-      </p>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-
-          <div style="margin-bottom: 2rem;">
-            <video 
-              controls 
-              muted 
-              loop 
-              playsinline 
-              preload="metadata"
-              style="width: 70%; height: auto;"
-            >
-              <source src="static/videos/latency.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End MP4 video -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3 has-text-centered">Media Report</h2>
-      <p class="has-text-centered" style="max-width: 900px; margin: 0 auto 2rem auto;">
-        We have been featured in several media outlets, highlighting our research and its impact.
-      </p>
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <img src="static/images/jiaodian.png" alt="First research result visualization" loading="lazy" style="max-width: 60%; max-height: 500px; width: auto; height: auto; object-fit: contain; display: block; margin: 0 auto;"/>
-        <h2 class="subtitle has-text-centered">
-          CCTV Focus Report.
-        </h2>
-      </div>
-      <div class="item">
-        <img src="static/images/xinhua.png" alt="Third research result visualization" loading="lazy" style="max-width: 60%; max-height: 500px; width: auto; height: auto; object-fit: contain; display: block; margin: 0 auto;"/>
-        <h2 class="subtitle has-text-centered">
-          Xinhua News.
-        </h2>
-      </div>
-      <div class="item">
-        <img src="static/images/zhejiang.png" alt="Fourth research result visualization" loading="lazy" style="max-width: 60%; max-height: 500px; width: auto; height: auto; object-fit: contain; display: block; margin: 0 auto;"/>
-        <h2 class="subtitle has-text-centered">
-          Zhejiang Daily News.
-        </h2>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End image carousel -->
-
-<!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{wang2026gae,
+<section class="section wash" id="abstract"><div class="wrap abstract"><span class="eyebrow">The paper</span><h2>Abstract</h2><p>Humanoid avatars extend human physical presence beyond the body, enabling people to participate in social, service, and labor activities through remotely operated robots. This requires teleoperation systems capable of realizing diverse and dynamic whole-body behaviors while maintaining responsive human-robot synchronization. We present <strong>General Action Expert (GAE)</strong>, a unified learning framework for general-purpose, low-latency humanoid whole-body teleoperation. To cover diverse human behaviors, GAE builds a large-scale human motion dataset from heterogeneous sources, including videos, animations, and motion capture, followed by standardization and augmentation. GAE then addresses the noise and embodiment mismatch in human motions with a two-stage training paradigm: a privileged generator policy first tracks human motion references in simulation and rolls out feasible humanoid trajectories; a deployable executor policy then learns to track these generated trajectories under curriculum domain randomization. For responsive human-robot synchronization, GAE introduces a latency-conditioned anticipation mechanism that adaptively compensates for end-to-end delay during real-time teleoperation. Simulation and real-world experiments on Unitree G1 and Westlake O1 robots demonstrate that GAE enables humanoids to smoothly mirror diverse, agile, and expressive human behaviors.</p></div></section>
+<section class="section" id="BibTeX"><div class="wrap"><div class="citation-head"><h2>Citation</h2><button class="button" id="copy-bibtex" type="button">Copy BibTeX</button></div><pre id="bibtex-code" tabindex="0"><code>@article{wang2026gae,
   title={GAE: General Action Expert for Real-Time Humanoid Teleoperation},
   author={Yuefan Wang and Huaicheng Zhou and Xiao He and Zhijie He and Mingchuan Yang and Huayi Zhang and Li Chai and Jinxin Liu and Donglin Wang},
   journal={arXiv preprint arXiv:2609.34233},
   year={2026}
-}</code></pre>
-    </div>
-</section>
-<!--End BibTex citation -->
-
-
-  <footer class="footer">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-
-          <p>
-            © 2026 GAE Project. Website adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>, originally based on the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-          </p>
-
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+}</code></pre><p class="copy-status" id="copy-status" role="status" aria-live="polite"></p></div></section>
+</main>
+<footer class="footer"><div class="wrap footer-inner"><p>© 2026 GAE Project · Westlake Robotics × Westlake University</p><p>Adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener noreferrer">Academic Project Page Template</a> and <a href="https://nerfies.github.io" target="_blank" rel="noopener noreferrer">Nerfies</a>.</p></div></footer>
+<button class="back-top" id="back-top" type="button" aria-label="Back to top" title="Back to top" hidden>↑</button>
+<script>
+(() => {
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const mainVideo = document.getElementById('main-demo');
+  if (reducedMotion.matches) { mainVideo.autoplay = false; mainVideo.pause(); }
+  // Prime nearby videos without downloading every clip on initial page load.
+  if ('IntersectionObserver' in window) {
+    const preloadObserver = new IntersectionObserver(entries => {
+      for (const entry of entries) if (entry.isIntersecting) {
+        entry.target.preload = 'metadata';
+        entry.target.load();
+        preloadObserver.unobserve(entry.target);
+      }
+    }, { rootMargin: '350px' });
+    document.querySelectorAll('video:not(#main-demo)').forEach(video => preloadObserver.observe(video));
+    const pauseObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => { if (!entry.isIntersecting) entry.target.pause(); });
+    }, { threshold: 0 });
+    document.querySelectorAll('video').forEach(video => pauseObserver.observe(video));
+  } else {
+    document.querySelectorAll('video:not(#main-demo)').forEach(video => { video.preload = 'metadata'; });
+  }
+  document.querySelectorAll('video').forEach(video => {
+    video.addEventListener('play', () => {
+      document.querySelectorAll('video').forEach(other => { if (other !== video) other.pause(); });
+    });
+  });
+  const topButton = document.getElementById('back-top');
+  const updateTop = () => { topButton.hidden = window.scrollY < 600; };
+  window.addEventListener('scroll', updateTop, { passive: true });
+  updateTop();
+  topButton.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reducedMotion.matches ? 'auto' : 'smooth' }));
+  document.getElementById('copy-bibtex').addEventListener('click', async () => {
+    const code = document.querySelector('#bibtex-code code');
+    const status = document.getElementById('copy-status');
+    try {
+      await navigator.clipboard.writeText(code.textContent);
+      status.textContent = 'BibTeX copied to clipboard.';
+    } catch {
+      const range = document.createRange();
+      range.selectNodeContents(code);
+      const selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+      status.textContent = 'BibTeX selected. Press Ctrl+C (Windows/Linux) or Command+C (Mac) to copy.';
+    }
+  });
+})();
+</script>
+</body>
+</html>
